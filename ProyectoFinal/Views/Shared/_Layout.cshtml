@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/miestilo.css">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <img src="https://www.priceclub.com.do/skin/frontend/default/theme276/images/logo.gif" />
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-top ">
+        <div class="container d-flex justify-content-center">
+            <div class="navbar-header">
+                <ul class="nav navbar navbar-collapse ">
+                    <li class="px-3">@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li class="px-3">@Html.ActionLink("¿Cómo Comprar?", "About", "Home")</li>
+                    @*<li class="px-3">@Html.ActionLink("Contacto", "Contact", "Home")</li>*@
+                    <li class="px-3">@Html.ActionLink("Hazte Socio", "Index", "Socios")</li>
+                    @Html.Partial("_LoginPartial")
+                </ul>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+<div class="d-flex justify-content-center" >
+    <footer class="FOOTER">
+        <label style="color: #ffffff;"> © 2019 Price Club Todos Los Derechos Reservados</label>
+        <div class="iconos">
+            <img src="../Models/images/icon-twitter.jpg ">
+            <img src="../Models/images/icon-facebook.jpg ">
+            <img src="../Models/images/icon-pinterest.jpg ">
+            <img src="../Models/images/icon-googleplus.jpg ">
+        </div>
+    </footer>
+</div>
+    <hr>
+   
+</body>
+</html>
